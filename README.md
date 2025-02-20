@@ -4,7 +4,7 @@ Este projeto demonstra como ingerir dados em tempo real usando o **Amazon Kinesi
 
 ## Topologia
 
-![Descrição da Imagem](C:\Users\julio\Documents\Olimpiadas\WorkshopSenai-53\img\workshop.drawio.png)
+![Topologia](C:/Users/julio/Documents/Olimpiadas/WorkshopSenai-53/img/workshop.drawio.png)
 
 ## Arquitetura
 
