@@ -48,7 +48,9 @@ jobs:
 
       # 5. Validar a configuração do Terraform
       - name: Terraform Validate
-        run: terraform validate
+        run: |
+            cd template/modules/Function
+            terraform validate
         working-directory: ./template
 
       # 6. Executar o Terraform Plan
