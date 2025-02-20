@@ -107,6 +107,3 @@ Se você tiver dúvidas ou precisar de mais informações, fique à vontade para
 ```bash
 terraform destroy
 ```
-
-- Assegure-se de que os dados de teste enviados para o Kinesis sejam válidos para evitar falhas no processamento da Lambda.
-```
