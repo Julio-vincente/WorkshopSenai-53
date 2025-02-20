@@ -58,6 +58,7 @@ jobs:
 
       # 7. Aplicar a configuração do Terraform
       - name: Terraform Apply
+        working-directory: ./template
         run: terraform apply -auto-approve
         env:
           TF_VAR_AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
