@@ -1,0 +1,5 @@
+/template/.terraform
+/template/.terraform.lock.hcl
+/template/terraform.tfstate
+/template/terraform.tfstate.backup
+/template/.terraform.tfstate.lock.info
