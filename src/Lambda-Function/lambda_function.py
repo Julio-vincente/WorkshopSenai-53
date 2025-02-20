@@ -17,7 +17,7 @@ def lambda_handler(event, context):
         try:
             payload = json.loads(raw_data)
         except json.JSONDecodeError as e:
-            print(f"❌ Erro ao decodificar JSON: {e}")
+            print(f"Erro ao decodificar JSON: {e}")
             continue
 
         transformed_data = {
@@ -30,6 +30,6 @@ def lambda_handler(event, context):
         }
 
         table.put_item(Item=transformed_data)
-        print(f"✅ Inserido no DynamoDB: {transformed_data}")
+        print(f"Inserido no DynamoDB: {transformed_data}")
 
     return {"statusCode": 200, "body": "Dados processados com sucesso"}
