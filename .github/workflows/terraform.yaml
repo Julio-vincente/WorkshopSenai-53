@@ -26,17 +26,29 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ secrets.AWS_DEFAULT_REGION }}
 
+      # 3. Configurar o Terraform
+      - name: Set up Terraform
+        uses: hashicorp/setup-terraform@v1
+        with:
+          terraform_version: "1.9.5"
+
+      - name: Change directory to template folder
+        run: cd template
+
       # 4. Inicializar o Terraform
       - name: Terraform Init
         run: terraform init
+        working-directory: ./template
 
       # 5. Validar a configuração do Terraform
       - name: Terraform Validate
         run: terraform validate
+        working-directory: ./template
 
       # 6. Executar o Terraform Plan
       - name: Terraform Plan
         run: terraform plan
+        working-directory: ./template
 
       # 7. Aplicar a configuração do Terraform
       - name: Terraform Apply
