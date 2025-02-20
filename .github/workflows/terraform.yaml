@@ -35,6 +35,11 @@ jobs:
       # Entra no diretorio
       - name: Change directory to template folder
         run: cd template
+    
+      - name: Zip Lambda Function
+        run: |
+            cd src/Lambda-Function
+            zip -r lambda_function.zip .
 
       # 4. Inicializar o Terraform
       - name: Terraform Init
